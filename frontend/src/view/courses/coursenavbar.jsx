@@ -1,6 +1,6 @@
 import React from 'react'
 import logoimg from '../../assets/logo1.png'
-import hexaware from '../../assets/hexaware.jpg'
+import hexaware from '../../assets/Hexaware.jpg'
 import { Flex, Image, Text } from '@chakra-ui/react'
 
 const Coursenavbar = () => {
