@@ -1,7 +1,7 @@
 import { Box, Button, Flex, FormControl, FormLabel, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Select, Text, useDisclosure, useToast } from '@chakra-ui/react'
 import React, { useContext, useEffect, useState } from 'react'
 import logoimg from '../../assets/logo1.png'
-import hexaware from '../../assets/Hexaware.jpg'
+import hexaware from '../../assets/hexaware.jpg'
 import { skillcontext } from '../components/skillcontext'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import useratom from '../atom/useratom'
