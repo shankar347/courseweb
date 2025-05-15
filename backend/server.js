@@ -7,7 +7,7 @@ import {v2 as cloudinary} from 'cloudinary'
 import usercontroller from './controllers/usercontroller.js'
 import coursecontroller from './controllers/coursecontroller.js'
 import batchcontroller from './controllers/batchcontroller.js'
-
+import path from 'path'
 
 const app=express()
 dotenv.config()
@@ -35,6 +35,17 @@ const port=process.env.PORT || 3000
 app.use('/api/user',usercontroller)
 app.use('/api/course',coursecontroller)
 app.use('/api/batch',batchcontroller)
+
+
+if(process.env.NODE_ENV === "production")
+{
+    app.use(express.static(path.join(__dirname,'frontend/dist')))
+
+    app.get('*',(req,res)=>{
+        res.sendFile(path.resolve(__dirname,'frontend','dist','index.html'))
+    })
+}
+
 
 app.listen(port, ()=>{
     console.log(`Server is running on port ${port}`)

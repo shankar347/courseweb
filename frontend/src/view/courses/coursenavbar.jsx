@@ -8,7 +8,7 @@ const Coursenavbar = () => {
     <Flex 
     justify={'space-between'}
     align={'center'}
-    mx={'8'}
+    mx={'8'}e
     mt={'1'}
     >
      <Flex flexDir={'column'}
